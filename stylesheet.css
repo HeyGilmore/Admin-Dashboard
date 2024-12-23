@@ -1,0 +1,68 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  display: grid;
+  min-height: 100%;
+}
+body {
+  display: grid;
+  grid-template: 80px auto auto / 210px auto auto;
+  grid-template-areas:
+    "aSide navBar  navBar"
+    "aSide mainSide mainSide"
+    "aSide mainSide mainSide"
+    "aSide mainSide mainSide";
+  font-family: "Roboto", serif;
+}
+
+nav {
+  grid-area: navBar;
+  width: 100%;
+}
+nav #navFirstSection {
+  width: 100%;
+  display: flex;
+}
+nav #navFirstSection input {
+  min-width: 240px;
+  border-radius: 12px;
+}
+nav #navSecondSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+nav #navSecondSection section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav #navSecondSection section button {
+  border: none;
+  border-radius: 12px;
+  background-color: lightskyblue;
+  color: aliceblue;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  margin: 4px;
+  min-width: 60px;
+}
+
+aside {
+  grid-area: aSide;
+  background-color: cadetblue;
+  color: azure;
+  font-weight: 700;
+}
+aside div section {
+  display: flex;
+  align-items: center;
+}
+main {
+  grid-area: mainSide;
+  background-color: goldenrod;
+}
