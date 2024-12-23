@@ -1,68 +1,62 @@
 @import url("./reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 html {
   display: grid;
+  min-width: 100%;
   min-height: 100%;
 }
+
 body {
   display: grid;
-  grid-template: 80px auto auto / 210px auto auto;
+  gap: 6px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
   grid-template-areas:
-    "aSide navBar  navBar"
-    "aSide mainSide mainSide"
-    "aSide mainSide mainSide"
-    "aSide mainSide mainSide";
-  font-family: "Roboto", serif;
+    "sideBar navBar navBar"
+    "sideBar mainSide mainSide";
+  grid-template-rows: 125px auto;
+  grid-template-columns: 220px auto;
 }
 
-nav {
+#navbar {
   grid-area: navBar;
+  background-color: #8fc93a;
   width: 100%;
+  padding: 1em;
 }
-nav #navFirstSection {
-  width: 100%;
+#navbar #navFirstSection {
   display: flex;
 }
-nav #navFirstSection input {
-  min-width: 240px;
-  border-radius: 12px;
+#navbar #navFirstSection input {
+  margin-right: auto;
 }
-nav #navSecondSection {
-  width: 100%;
-  display: flex;
-  align-items: center;
 
-}
-nav #navSecondSection section {
-  width: 100%;
+#navbar #navSecondSection {
   display: flex;
   align-items: center;
 }
-
-nav #navSecondSection section button {
+#navbar #navSecondSection .introSection {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+#navbar #navSecondSection .introSection img {
+  padding-right: 12px;
+}
+#navbar #navSecondSection .buttonsSection button {
+  background-color: #1e91d6;
   border: none;
   border-radius: 12px;
-  background-color: lightskyblue;
+  padding: 6px 12px;
   color: aliceblue;
   font-weight: 600;
-  letter-spacing: 1px;
-  padding: 4px 8px;
-  margin: 4px;
-  min-width: 60px;
 }
-
-aside {
-  grid-area: aSide;
-  background-color: cadetblue;
-  color: azure;
-  font-weight: 700;
+#sidebar {
+  grid-area: sideBar;
+  background-color: #1e91d6;
 }
-aside div section {
-  display: flex;
-  align-items: center;
-}
-main {
+#billboard {
   grid-area: mainSide;
-  background-color: goldenrod;
+  background-color: #e4cc37;
 }

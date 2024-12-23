@@ -8,67 +8,104 @@
   <title>Admin Dashboard</title>
 </head>
 <body>
- 
-    <!-- Navigation -->
-    <nav>
-        <div id="navFirstSection">
-            <img src="https://img.icons8.com/stickers/25/search.png" alt="Search" />
-            <input type="text" id="searchInput" name="searchInput">
-            <img src="https://img.icons8.com/stickers/20/appointment-reminders.png" alt="bell">
-            <img src="https://img.icons8.com/stickers/20/batman-new.png" alt="">
-            <strong>Morgan Oakley</strong>
-        </div>
-        <div id="navSecondSection">
-            <section>
-                <img src="https://img.icons8.com/stickers/40/batman-new.png" alt="">
-                <section>
-                    <span>Hi there,</span>
-                    <h1>Morgan Oakley (@morgan)</h1>
-                </section>
-            </section>
-            <section>
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-            </section>
-        </div>
-    </nav>
-    <!-- Sidebar -->
-    <aside>
-        <div>
-            <section>
-                <img src="https://img.icons8.com/stickers/20/black-cat.png" alt="">
-            <span>Dashboard</span>
-            </section>
-        </div>
-        <div>
-            <!-- Home -->
-            <section><img src="https://img.icons8.com/stickers/20/home.png" alt="Home" /><span>Home</span></section>
-            <!--Profile-->
-            <section><img src="https://img.icons8.com/stickers/20/test-account.png" alt="Profile" /><span>profile</span></section>
-            <!-- Messages -->
-            <section><img src="https://img.icons8.com/stickers/20/new-post.png" alt="Messages" /><span>Messages</span></section>
-            <!-- History -->
-            <section><img src="https://img.icons8.com/stickers/20/time-machine.png" alt="History" /><span>History</span></section>
-            <!-- Tasks -->
-            <section><img src="https://img.icons8.com/stickers/20/task.png" alt="Tasks" /><span>Tasks</span></section>
-             <!-- Tasks -->
-             <section><img src="https://img.icons8.com/stickers/20/people-working-together.png" alt="Tasks" /><span>Communities</span></section>
-        </div>
-        <div>
-            <section><img src="https://img.icons8.com/stickers/20/settings.png" alt="settings" /><span>Settings</span></section>
-            <section><img src="https://img.icons8.com/stickers/20/customer-support.png
-                " alt="support" /><span>Support</span></section>
-            <section><img src="https://img.icons8.com/stickers/20/privacy.png" alt="privacy" /><span>Privacy</span></section>
-        </div>
-    </aside>
-    <!-- Main Body -->
-    <main>
-        <div><h2>Your Projects</h2></div>
-        <div><h2>Announcements</h2></div>
-        <div><h2>Trending</h2></div>
-    </main>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div id="navFirstSection">
+      <img src="https://img.icons8.com/stickers/25/search.png" alt="Search">
+      <input type="text" id="searchInput" name="searchInput">
+      <img src="https://img.icons8.com/stickers/27/appointment-reminders.png" alt="Notifications">
+      <img src="https://img.icons8.com/stickers/20/batman-new.png" alt="Profile Icon">
+      <strong>Morgan Oakley</strong>
+    </div>
+    <div id="navSecondSection">
+      <section class="introSection">
+        <img src="https://img.icons8.com/stickers/80/batman-new.png" alt="Profile">
+        <section>
+          <span>Hi there,</span>
+          <h1>Morgan Oakley (@morgan)</h1>
+        </section>
+      </section>
+      <section class="buttonsSection">
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+      </section>
+    </div>
+  </nav>
 
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/black-cat.png" alt="Dashboard">
+        <span>Dashboard</span>
+      </section>
+    </div>
+    <div>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/home.png" alt="Home">
+        <span>Home</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/test-account.png" alt="Profile">
+        <span>Profile</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/new-post.png" alt="Messages">
+        <span>Messages</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/time-machine.png" alt="History">
+        <span>History</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/task.png" alt="Tasks">
+        <span>Tasks</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/people-working-together.png" alt="Communities">
+        <span>Communities</span>
+      </section>
+    </div>
+    <div>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/settings.png" alt="Settings">
+        <span>Settings</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/customer-support.png" alt="Support">
+        <span>Support</span>
+      </section>
+      <section>
+        <img src="https://img.icons8.com/stickers/20/privacy.png" alt="Privacy">
+        <span>Privacy</span>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Main Body -->
+  <main id="billboard">
+    <div>
+      <h2>Your Projects</h2>
+      <section class="projectArticle">
+        <h4>Super Cool Projects</h4>
+        <p>
+          Sed template adsfsdf asf asd fdsfa df asdf afdf. asdfsd fasd fas df fasd f sadf dfafd fasdf.
+        </p>
+        <aside>
+          <img src="https://img.icons8.com/stickers/20/add-to-favorites.png" alt="Star">
+          <img src="https://img.icons8.com/stickers/20/share.png" alt="Share">
+        </aside>
+      </section>
+      <!-- Repeat sections for projects as needed -->
+    </div>
+    <div>
+      <h2>Announcements</h2>
+    </div>
+    <div>
+      <h2>Trending</h2>
+    </div>
+  </main>
 
   <script src="scripts.js"></script>
 </body>
