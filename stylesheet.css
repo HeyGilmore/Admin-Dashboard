@@ -3,8 +3,8 @@
 
 html {
   display: grid;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     "sideBar navBar navBar"
     "sideBar mainSide mainSide";
   grid-template-rows: 125px auto;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 180px auto;
 }
 
 #navbar {
@@ -24,6 +24,7 @@ body {
   background-color: #8fc93a;
   width: 100%;
   padding: 1em;
+  min-width: 340px;
 }
 #navbar #navFirstSection {
   display: flex;
@@ -43,6 +44,10 @@ body {
 }
 #navbar #navSecondSection .introSection img {
   padding-right: 12px;
+  transition: all 0.4s ease-in-out;
+}
+#navbar #navSecondSection .introSection img:hover {
+  transform: scale(1.08);
 }
 #navbar #navSecondSection .buttonsSection button {
   background-color: #1e91d6;
@@ -51,12 +56,116 @@ body {
   padding: 6px 12px;
   color: aliceblue;
   font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  margin: 0 4px;
+}
+#navbar #navSecondSection .buttonsSection button:hover {
+  transform: scale(1.2);
+  background-color: #125883;
 }
 #sidebar {
   grid-area: sideBar;
   background-color: #1e91d6;
 }
+#sidebar div {
+  display: flex;
+  flex-direction: column;
+}
+#sidebar div section {
+  display: flex;
+  flex-direction: row;
+  padding-left: 24px;
+  padding-top: 24px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+#sidebar div section:hover {
+  cursor: pointer;
+  color: aliceblue;
+  font-weight: 600;
+}
+#sidebar div section img {
+  padding-right: 8px;
+}
+
 #billboard {
   grid-area: mainSide;
   background-color: #e4cc37;
+  padding: 0 3em;
+  display: grid;
+  grid-template-areas:
+    "projects  announce"
+    "projects trending";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 3fr 1fr;
+}
+/* Projects whole */
+#billboard #projectsSections {
+  grid-area: projects;
+}
+/* Title Projects */
+#billboard #projectsSections #projectsTitleSection {
+  padding: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/*  */
+#billboard #projectsSections #projectContainers {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
+  gap: 26px;
+  padding: 0 12px;
+}
+/* Projects */
+#billboard #projectsSections #projectContainers .projectArticle {
+  background-color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+/* Projects-icon */
+#billboard #projectsSections #projectContainers .projectArticle aside {
+  display: inline-flex;
+}
+#billboard #announcements {
+  grid-area: announce;
+}
+#billboard #announcements h3 {
+  padding: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+#billboard #announcements #announcementsSection .callToAction {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 12px;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+#billboard #trending .card {
+  grid-area: trending;
+  background-color: aliceblue;
+  border-radius: 12px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+#billboard #trending h3 {
+  padding: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+#billboard #trending div {
+  display: flex;
+  padding: 1em;
+}
+#billboard #trending div img {
+  padding-right: 12px;
 }
